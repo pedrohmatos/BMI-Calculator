@@ -1,0 +1,27 @@
+@media screen and (max-width: 720px) {
+    .ilustration > img {
+        transition: 0.2s ease-in ;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .ilustration > img {
+        transition: 0.2s ease-in ;
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 612px) {
+    .ilustration > img {
+        transition: 0.2s ease-in ;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .calculator > h1 {
+        transition: 0.2s ease-in ;
+        font-size: 20px;
+    }
+}

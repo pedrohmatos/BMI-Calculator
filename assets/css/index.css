@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bckground01: #18181b;
+    --bckground02: #262626;
+    --bckgorund03: #3f3f46;
+    --bckground04: #16a34a;
+
+    --color01: #f8fafc;
+    --color02: #cbd5e1;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bckground01);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin: 32px;
+}
+
+.ilustration > img {
+    width: 350px;
+}
+
+.calculator {
+    background-color: var(--bckground02);
+    border-radius: 7px;
+    padding: 32px;
+    color: var(--color01);
+}
+
+.calculator > h1 {
+    margin-bottom: 32px;
+    position: relative;
+}
+
+.calculator > h1::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    width: 115px;
+    border: 2px solid var(--bckground04);
+    border-radius: 100px;
+}
+
+.calculator > form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inputBoxIn {
+    background-color: var(--bckgorund03);
+
+    display: flex;
+    align-items: center;
+    padding: 7px 10px;
+}
+
+.inputBoxIn > img {
+    margin-right: 10px;
+}
+
+.inputBoxIn > input {
+    background-color: transparent;
+    width: 85%;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: var(--color01);
+}
+
+.inputBoxIn > input::placeholder {
+    color: var(--color01);
+}
+
+.inputBoxIn [type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+
+#buttons {
+    display: flex;
+    gap: 16px;
+}
+
+button {
+    background-color: var(--bckground04);
+    border: none;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    color: var(--color01);
+    cursor: pointer;
+    width: 100%;
+}
+
+.clear {
+    width: 100px;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #20ca5e;
+    transition: all 0.3s ease-in-out;
+}
+
+#infos {
+    margin-top: 32px;
+    border-top: 2px solid var(--bckground01);
+    padding-top: 10px;
+
+    display: none;
+    align-items: center;
+    gap: 16px;
+}
+
+#infos.ativado {
+    display: flex;
+}
+
+#num {
+    font-size: 48px;
+}
+
+#num.ideal {
+    color: var(--bckground04);
+}
